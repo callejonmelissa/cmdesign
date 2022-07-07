@@ -1,3 +1,22 @@
+/* ATTENTION, PENSER A FAIRE LES VARIABLES POUR LE COULEURS */
+
+/* LOGO  */
+
+.logo {
+    margin-top: 20px;
+    width: 100px;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "anektamil-regular";
+}
+
 /* MENU BURGER */
 
 [type="checkbox"]:checked,
@@ -19,6 +38,7 @@
   cursor: pointer;
   z-index: 10;
 }
+/* line burger */
 .menu-icon:checked + label:before,
 .menu-icon:not(:checked) + label:before{
   position: absolute;
@@ -29,14 +49,15 @@
   z-index: 20;
   top: 0;
   left: 0;
-  border-top: 2px solid #fff;
-  border-bottom: 2px solid #fff;
+  border-top: 2px solid $secondary;
+  border-bottom: 2px solid $secondary;
   transition: border-width 100ms 1500ms ease,
               top 100ms 1600ms cubic-bezier(0.23, 1, 0.32, 1),
               height 100ms 1600ms cubic-bezier(0.23, 1, 0.32, 1),
               background-color 200ms ease,
               transform 200ms cubic-bezier(0.23, 1, 0.32, 1);
 }
+/* burger croix droite */
 .menu-icon:checked + label:after,
 .menu-icon:not(:checked) + label:after{
   position: absolute;
@@ -47,18 +68,19 @@
   z-index: 20;
   top: 10px;
   right: 4px;
-  background-color: #fff;
+  background-color: $secondary;
   margin-top: -1px;
   transition: width 100ms 1750ms ease,
               right 100ms 1750ms ease,
               margin-top 100ms ease,
               transform 200ms cubic-bezier(0.23, 1, 0.32, 1);
 }
+/* burger croix gauche */
 .menu-icon:checked + label:before{
   top: 10px;
   transform: rotate(45deg);
   height: 2px;
-  background-color: #fff;
+  background-color: $secondary;
   border-width: 0;
   transition: border-width 100ms 340ms ease,
               top 100ms 300ms cubic-bezier(0.23, 1, 0.32, 1),
@@ -167,7 +189,7 @@
   font-weight: 800;
   display: inline-block;
   position: relative;
-  color: #ececee;
+  color: #fff;
   transition: all 250ms linear;
   text-decoration: none;
 }
@@ -185,7 +207,7 @@
   margin-top: -1vh;
   width: 0;
   left: 0;
-  background-color: #2FE6AE;
+  background-color: $secondary;
   opacity: 0.90;
   transition: width 250ms linear;
   z-index: -1;
