@@ -16,14 +16,15 @@ div.presentation {
   }
   .text-plein {
     font-size: 2rem;
+    color: white;
   }
   
   @media (max-width: 615px) {
     .text-contour {
-      font-size: 30px;
+      font-size: 2rem;
     }
   .text-plein {
-      font-size: 30px;
+      font-size: 2rem;
     }
   div.presentation {
       height: 85vh;
@@ -35,11 +36,11 @@ div.presentation {
   
   @media (max-width: 388px) {
     .text-contour {
-      font-size: 20px;
+      font-size: 1.2rem;
     }
   
     .text-plein {
-      font-size: 20px;
+      font-size: 1.2rem;
     }
   }
 
