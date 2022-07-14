@@ -3,8 +3,9 @@
 /* LOGO  */
 
 .logo {
-    margin-top: 20px;
-    width: 100px;
+    margin-top: 15px;
+    margin-left: 15px;
+    width: 120px;
 }
 
 *,
@@ -155,6 +156,7 @@ body {
   text-align: center;
   transform: translateY(-50%);
   list-style: none;
+  background: $primary;
 }
 .nav ul li{
   position: relative;
@@ -183,7 +185,7 @@ body {
   transition-delay: 50ms;
 }
 .nav ul li a{
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Anton', sans-serif;
   font-size: 3vh;
   line-height: 1.2;
   font-weight: 800;
@@ -217,6 +219,9 @@ body {
   width: 100%;
 }
 
+.menu-icon:checked ~ .nav {
+  background-color: $primary;
+}
 
 .menu-icon:checked ~ .nav  ul li {
   pointer-events: auto;

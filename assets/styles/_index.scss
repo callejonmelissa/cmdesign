@@ -1,0 +1,8 @@
+a.text-contour:hover{
+    background-image: linear-gradient(120deg, #EEC62A 0%, #EEC62A 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 0.2em;
+    background-position: 0 88%;
+    transition: width 250ms linear;
+    color: $primary;
+  }
