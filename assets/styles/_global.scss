@@ -53,3 +53,12 @@ p {
 	transition: background-size 0.25s ease-in;
   }
 
+  .span-yellow {
+    color: $secondary;
+  }
+
+  .letter-spacing {
+    letter-spacing: 1px;
+    font-size: 0.5rem;
+  }
+
