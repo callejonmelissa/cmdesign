@@ -21,8 +21,9 @@ p {
     background-color: $primary;
 }
 
-.a-contact {
+.a-karla {
     font-family: 'Karla';
+    font-size: 0.6rem;
     color: white;
 }
 
@@ -35,7 +36,7 @@ p {
     color: $primary;
   }
 
-  a.a-contact:hover{
+  a.a-karla:hover{
     background-image: linear-gradient(120deg, #EEC62A 0%, #EEC62A 100%);
     background-repeat: no-repeat;
     background-size: 100% 0.2em;
