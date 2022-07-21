@@ -17,7 +17,8 @@ class PortfolioType extends AbstractType
             ->add('date')
             ->add('link')
             ->add('description')
-            ->add('category', null, ['choice_label' => 'title'])
+            ->add('theme')
+            ->add('category', null, ['choice_label' => 'name'])
         ;
     }
 

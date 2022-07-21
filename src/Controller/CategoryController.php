@@ -13,7 +13,6 @@ class CategoryController extends AbstractController
     public function show(Category $category): Response
     {
         return $this->render('category/'.$category->getTemplate().'.html.twig', [
-            'controller_name' => 'CategoryController',
             'category'=>$category,
         ]);
     }

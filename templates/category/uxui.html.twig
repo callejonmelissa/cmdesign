@@ -23,119 +23,27 @@
 	<!-- DESIGN UX/UI -->
     <div class="container-fluid">
         <div class="row">
+
+		
+		{% for portfolio in category.portfolios %}
+			
+		
             <div class="col-lg-4 col-md-4 col-sm-12 mt-5">
                 <img src="{{asset('build/images/testapside.jpg')}}" class="img-fluid">
                 <div class="d-flex justify-content-between">
-                    <h1 class="text-contour mt-2">Apside</h1>
-                    <p class="mt-4"><i>Juin 2022</i></p>
+                    <h1 class="text-contour mt-2">{{ portfolio.title }}</h1>
+                    <p class="mt-4"><i>{{ portfolio.date|date('m/Y') }}</i></p>
                 </div>
-                <p class="letter-spacing">Création d'un site web</p>
-                <p class="mt-3"><span class="underline--magical">Apside</span> est une entreprise de Services du Numérique (ESN) qui offre un accompagnement complet à ses clients de la stratégie à la mise en œuvre des projets informatiques et industriels, jusqu'à l'expertise et la formation.<br/><br/>
-                Lors de ce hackathon organisé par la WCS, Apside souhaitait améliorer l'intelligence collective en rassemblant les forces et les compétences de tous les acteurs concernés. Le but étant de développer un nouvel outil permettant de faciliter l'organisation au sein de l'entreprise, J'ai développé une maquette, une <span class="underline--magical">application de gestion de projets</span>.<br/><br/>
-                <i>Figma, PHP, Symfony, HTML, CSS, GitHub</i></p>
+                <p class="letter-spacing">{{ portfolio.theme }}</p>
+                <p class="mt-3">{{ portfolio.description }}<br/><br/>
+                <i>{{ portfolio.stack }}</i></p>
                 <div class="d-flex justify-content-between">
-                    <a href="https://github.com/Samsuffy0100110/Apside-Hackathon" class="a-karla">GitHub Repository</a>
-                    <a href="https://www.figma.com/proto/EnunHLaUNpoFKmecYiwfTP/Hackathon---Apside?node-id=220%3A2418&starting-point-node-id=220%3A2418&scaling=contain" class="a-karla" target="_blank">Prototype</a>
+                    <a href="https://github.com/Samsuffy0100110/Apside-Hackathon" class="a-karla">{{ portfolio.link }}</a>
+                    <a href="https://www.figma.com/proto/EnunHLaUNpoFKmecYiwfTP/Hackathon---Apside?node-id=220%3A2418&starting-point-node-id=220%3A2418&scaling=contain" class="a-karla" target="_blank">{{ portfolio.link }}</a>
                 </div>
             </div>
-
-            <div class="col-lg-4 col-md-4 col-sm-12 mt-5">
-                <img src="{{asset('build/images/taw.jpg')}}" class="img-fluid img-taw">
-                <div class="d-flex justify-content-between">
-                    <h1 class="text-contour mt-2">Take A Waste</h1>
-                    <p class="mt-4"><i>Mai 2022</i></p>
-                </div>
-                <div>
-                    <p class="letter-spacing">Création d'un site web</p>
-                    <p class="mt-3"><span class="underline--magical">Take A Waste</span> est une jeune boîte qui permet aux entreprises du secteur tertiaire de gérer facilement leurs contrats déchets qu'ils ont avec des prestataires de collecte comme Véolia, Suez, etc...<br/><br/>
-                    J'ai réalisé à partir d'un brief et dans le respect de la <span class="underline--magical">charte graphique</span> la maquette de l'application interne de TAW. <br/><br/>
-                    L'application est en cours de conception avec l'outil <span class="underline--magical">Bubble</span> par la team RoKi.<br/><br/>
-                    <i>Figma, Bubble</i></p>
-                    <div class="d-flex justify-content-between">
-                        <a href="#" target="_blank" class="a-karla">Conception en cours</a>
-                        <a href="https://www.figma.com/proto/31VsTuS8VDLRljhUEZheik/Take-A-Waste?node-id=216%3A8926&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=216%3A8926" class="a-karla" target="_blank">Prototype</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-4 col-sm-12 mt-5">
-                <img src="{{asset('build/images/montbeliart.jpeg')}}" class="img-fluid">
-                <div class="d-flex justify-content-between">
-                    <h1 class="text-contour mt-2">Montbéliart</h1>
-                    <p class="mt-4"><i>Mai 2022</i></p>
-                </div>
-                <p class="letter-spacing">Création d'un site web</p>
-                <p class="mt-3"><span class="underline--magical">Montbéliart</span> est un jeu d'Histoire en ligne développer pour un professeur de collège.
-                Le jeu était déjà appliqué à ses élèves en classe, il souhaitait leur proposer en format numérique.<br/><br/>
-                Ce projet a été réalisé en équipe de trois en sept semaines.<br/>
-                <i>Figma, PHP, Symfony, HTML, CSS, GitHub</i></p>
-                <div class="d-flex justify-content-between">
-                    <a href="https://github.com/WildCodeSchool/2022-03-php-remote-1283-montbeliard-cite-libre" class="a-karla">GitHub Repository</a>
-                    <a href="https://montbeliard-cite-libre.remote-fr-1.wilders.dev/" class="a-karla" target="_blank">Website</a>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-4 col-sm-12 mt-5">
-                <img src="{{asset('build/images/potesagers.jpg')}}" class="img-fluid">
-                <div class="d-flex justify-content-between">
-                    <h1 class="text-contour mt-2">Potes'agers</h1>
-                    <p class="mt-4"><i>Mai 2022</i></p>
-                </div>
-                <p class="letter-spacing">Création d'un site web</p>
-                <p class="mt-3"><span class="underline--magical">Potes'agers</span> est une entreprise fictive qui lutte contre le gaspillage alimentaire.
-                Voilà le topo : des tonnes de produits sont gaspillés tous les jours, des millions de Français n’ont pas assez, d’autres souhaitent consommer mieux et s’engager.
-                Alors chez Potes'agers on se bouge contre le gaspillage !<br/><br/>
-                Lors de ce hackathon sur l'écologie organisé par la WCS, nous avons conçu une application qui permet de donner et/ou récupérer de la nourriture autour de chez soi ou bien de partager son potager.<br/><br/>
-                <i>Figma, PHP, MVC, HTML, CSS, GitHub</i></p>
-                <div class="d-flex justify-content-between">
-                    <a href="https://github.com/Desbiens-Mickael/potes_agers" class="a-karla">GitHub Repository</a>
-                </div>
-            </div>
+			{% endfor %}
             
-
-            <div class="col-lg-4 col-md-4 col-sm-12 mt-5">
-                <img src="{{asset('build/images/blindtest.png')}}" class="img-fluid">
-                <div class="d-flex justify-content-between">
-                    <h1 class="text-contour mt-2">BlindTest</h1>
-                    <p class="mt-4"><i>Avril 2022</i></p>
-                </div>
-                <p class="letter-spacing">Création d'un site web</p>
-                <p class="mt-3">Ce projet a été réalisé en équipe de quatre en trois semaines. <br/>
-                Le but était de créer une application, un quizz musical en utilisant une architecture <span class="underline--magical">MVC</span> et procéder à une modélisation de la <span class="underline--magical">base de données</span>.<br/><br/>
-                Nous avions des tâches à réaliser que nous avons développé dans les temps, ce qui nous a permis de rajouter des features intéressantes.<br/><br/>
-                <i>Figma, PHP, MVC, HTML, CSS, GitHub</i></p>
-                <div class="d-flex justify-content-between">
-                    <a href="https://www.canva.com/design/DAFAZOiOd24/6MXdaEmg6kwrQOgHhvkiVg/view" class="a-karla" target="_blank">Brief</a>
-                    <a href="https://www.figma.com/file/9y6QqeRG368oNDrvv0FTV5/Projet-2---BlindTest-%F0%9F%A5%B3" class="a-karla" target="_blank">Prototype</a>
-                    <a href="https://p2-blind-test.remote-fr-1.wilders.dev/" class="a-karla" target="_blank">Website</a>
-                    <a href="https://github.com/WildCodeSchool/2022-03-php-remotefr-p2-blind-test" class="a-karla">GitHub Repository</a>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-4 col-sm-12 mt-5">
-                <img src="{{asset('build/images/trombi.jpg')}}" class="img-fluid">
-                <div class="d-flex justify-content-between">
-                    <h1 class="text-contour mt-2">Trombinoscope</h1>
-                    <p class="mt-4"><i>Mars 2022</i></p>
-                </div>
-                <p class="letter-spacing">Création d'un site web</p>
-                <p class="mt-3">Ce projet a été réalisé en équipe de quatre sur une semaine<br/>
-                Le but de ce projet étaient de créer un trombinoscope rassemblant la promo du curcus Symfony Bootcamp de la Wild Code School. <br/><br/>
-                Les critères était que le site soit conforme aux normes W3C et que la <span class="underline--magical">structure du site web</span> respecte la <span class="underline--magical">sémantique HTML</span>.<br/><br/>
-                <i>Figma, HTML, CSS, GitHub</i></p>
-                <div class="d-flex justify-content-between">
-                    <a href="https://github.com/MarysaR/Trombinoscope" class="a-karla">GitHub Repository</a>
-                    <a href="https://www.figma.com/proto/EnunHLaUNpoFKmecYiwfTP/Hackathon---Apside?node-id=220%3A2418&starting-point-node-id=220%3A2418&scaling=contain" class="a-karla" target="_blank">Prototype</a>
-                </div>
-            </div>
-
 		</div>
 	</div>
-
-
-<br/>
-<br/>
-
-
-
 {% endblock %}

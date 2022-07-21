@@ -31,6 +31,12 @@ class Portfolio
     #[ORM\ManyToOne(targetEntity: Category::class, inversedBy: 'portfolios')]
     private $category;
 
+    #[ORM\Column(type: 'string', length: 255, nullable: true)]
+    private $theme;
+
+    #[ORM\Column(type: 'string', length: 255, nullable: true)]
+    private $stack;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -104,6 +110,30 @@ class Portfolio
     public function setCategory(?Category $category): self
     {
         $this->category = $category;
+
+        return $this;
+    }
+
+    public function getTheme(): ?string
+    {
+        return $this->theme;
+    }
+
+    public function setTheme(?string $theme): self
+    {
+        $this->theme = $theme;
+
+        return $this;
+    }
+
+    public function getStack(): ?string
+    {
+        return $this->stack;
+    }
+
+    public function setStack(?string $stack): self
+    {
+        $this->stack = $stack;
 
         return $this;
     }
