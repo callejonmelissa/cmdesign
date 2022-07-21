@@ -2,17 +2,19 @@
 
 namespace App\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use App\Entity\Portfolio;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class PortfolioController extends AbstractController
 {
-    #[Route('/portfolio', name: 'app_portfolio')]
-    public function index(): Response
+    #[Route('/portfolio/{slug}', name: 'portfolio_show')]
+    public function show(Portfolio $portfolio): Response
     {
-        return $this->render('portfolio/index.html.twig', [
+        return $this->render('portfolio/show.html.twig', [
             'controller_name' => 'PortfolioController',
+            'portfolio'=>$portfolio,
         ]);
     }
 }

@@ -24,6 +24,9 @@ class Category
     #[ORM\OneToMany(mappedBy: 'category', targetEntity: Portfolio::class)]
     private $portfolios;
 
+    #[ORM\Column(type: 'string', length: 255, nullable: true)]
+    private $template;
+
     public function __construct()
     {
         $this->portfolios = new ArrayCollection();
@@ -84,6 +87,18 @@ class Category
                 $portfolio->setCategory(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getTemplate(): ?string
+    {
+        return $this->template;
+    }
+
+    public function setTemplate(?string $template): self
+    {
+        $this->template = $template;
 
         return $this;
     }

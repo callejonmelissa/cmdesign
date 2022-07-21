@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello CategoryController!
+{% endblock %}
+
+{% block body %}
+	{% if 'template' === 'uxui' %}
+		{% include "include/_uxui.html.twig" %}
+	{% endif %}
+	{% if 'template' === 'graphicdesign' %}
+		{% include "include/_graphicdesign.html.twig" %}
+	{% endif %}
+{% endblock %}
