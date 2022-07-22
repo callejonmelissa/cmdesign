@@ -1,4 +1,25 @@
 {{ form_start(form) }}
-    {{ form_widget(form) }}
-    <button class="btn">{{ button_label|default('Save') }}</button>
-{{ form_end(form) }}
+<div class="container">
+	<div class="row">
+		<div class="col-2"></div>
+		<div class="col-8">
+			<div class="card">
+				<div class="card-body mx-auto d-flex flex-column">
+					<p>Catégories</p>
+                    {{ form_widget(form.category) }}
+                    {# upload img #}
+                    <p>Nom du projet</p>
+					{{ form_widget(form.title) }}
+					{{ form_widget(form.date) }}
+					{{ form_widget(form.link) }}
+					{{ form_widget(form.description) }}
+					{{ form_widget(form) }}
+					<button class="btn-primary">{{ button_label|default('Save') }}</button>
+					<a href="{{ path('app_crud_index') }}">Retour à la liste</a>
+				</div>
+				{{ form_end(form) }}
+			</div>
+			<div class="col-2"></div>
+		</div>
+	</div>
+</div>

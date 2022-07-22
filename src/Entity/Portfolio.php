@@ -2,10 +2,14 @@
 
 namespace App\Entity;
 
-use App\Repository\PortfolioRepository;
+use DateTime;
 use Doctrine\ORM\Mapping as ORM;
+use App\Repository\PortfolioRepository;
+use Symfony\Component\HttpFoundation\File\File;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 #[ORM\Entity(repositoryClass: PortfolioRepository::class)]
+#[Vich\Uploadable] 
 class Portfolio
 {
     #[ORM\Id]
@@ -18,6 +22,12 @@ class Portfolio
 
     #[ORM\Column(type: 'string', length: 255)]
     private $image;
+
+    #[Vich\UploadableField(mapping: 'portfolio', fileNameProperty: 'image')]
+    private File $imageFile;
+
+    #[ORM\Column(type: 'datetime')]
+    private ?\DateTimeInterface $updatedAt = null;
 
     #[ORM\Column(type: 'datetime')]
     private $date;
@@ -64,6 +74,20 @@ class Portfolio
         $this->image = $image;
 
         return $this;
+    }
+
+    public function setImageFile(File $image = null): self
+    {        
+        $this->imageFile = $image;
+        if ($image) {
+            $this->updatedAt = new DateTime('now');
+          }
+        return $this;
+    }
+
+    public function getImageFile(): ?File
+    {
+        return $this->imageFile;
     }
 
     public function getDate(): ?\DateTimeInterface

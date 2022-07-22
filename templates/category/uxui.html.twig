@@ -29,7 +29,7 @@
 			
 		
             <div class="col-lg-4 col-md-4 col-sm-12 mt-5">
-                <img src="{{asset('build/images/testapside.jpg')}}" class="img-fluid">
+                <img src="{{ vich_uploader_asset(portfolio, 'imageFile') }}" class="img-fluid">
                 <div class="d-flex justify-content-between">
                     <h1 class="text-contour mt-2">{{ portfolio.title }}</h1>
                     <p class="mt-4"><i>{{ portfolio.date|date('m/Y') }}</i></p>
