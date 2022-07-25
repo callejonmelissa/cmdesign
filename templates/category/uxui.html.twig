@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Portfolio - UX/UI DESIGN
+{% endblock %}
+
+{% block body %}
+
+	<!-- TEXTE HEADER -->
+	<div class="container text-header presentation in-left d-flex flex-column justify-content-center">
+		<div class="row texte">
+			<div class="col-lg">
+				<h1 class="text-plein">UX/UI DESIGN & DÉVELOPPEMENT WEB</h1>
+				<h1 class="text-contour">UX/UI DESIGN & DÉVELOPPEMENT WEB</h1>
+				<h1 class="text-contour">UX/UI DESIGN & DÉVELOPPEMENT WEB</h1>
+				<h1 class="text-plein">UX/UI DESIGN & DÉVELOPPEMENT WEB</h1>
+				<h1 class="text-contour">UX/UI DESIGN & DÉVELOPPEMENT WEB</h1>
+				<h1 class="text-contour">UX/UI DESIGN & DÉVELOPPEMENT WEB</h1>
+				<h1 class="text-plein">UX/UI DESIGN & DÉVELOPPEMENT WEB</h1>
+			</div>
+		</div>
+	</div>
+
+	<!-- DESIGN UX/UI -->
+    <div class="container-fluid">
+        <div class="row">
+
+		
+		{% for portfolio in category.portfolios %}
+			
+		
+            <div class="col-lg-4 col-md-4 col-sm-12 mt-5">
+                <img src="{{ vich_uploader_asset(portfolio, 'imageFile') }}" class="img-fluid">
+                <div class="d-flex justify-content-between">
+                    <h1 class="text-contour mt-2">{{ portfolio.title }}</h1>
+                    <p class="mt-4"><i>{{ portfolio.date|date('m/Y') }}</i></p>
+                </div>
+                <p class="letter-spacing">{{ portfolio.theme }}</p>
+                <p class="mt-3">{{ portfolio.description }}<br/><br/>
+                <i>{{ portfolio.stack }}</i></p>
+                <div class="d-flex justify-content-between">
+                    <a href="https://github.com/Samsuffy0100110/Apside-Hackathon" class="a-karla">{{ portfolio.link }}</a>
+                    <a href="https://www.figma.com/proto/EnunHLaUNpoFKmecYiwfTP/Hackathon---Apside?node-id=220%3A2418&starting-point-node-id=220%3A2418&scaling=contain" class="a-karla" target="_blank">{{ portfolio.link }}</a>
+                </div>
+            </div>
+			{% endfor %}
+            
+		</div>
+	</div>
+{% endblock %}
