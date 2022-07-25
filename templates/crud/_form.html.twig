@@ -5,17 +5,26 @@
 		<div class="col-8">
 			<div class="card">
 				<div class="card-body mx-auto d-flex flex-column">
+
+                    <div>
 					<p>Catégories</p>
-                    {{ form_widget(form.category) }}
-                    {# upload img #}
-                    <p>Nom du projet</p>
-					{{ form_widget(form.title) }}
+					<div class="mt-3 d-flex flex-column w-75 mx-auto">
+					<p class="p-black">Catégories
+					{{ form_widget(form.category) }}</p>
+					{{ form_widget(form.imageFile) }}
+					<p class="p-black">Nom du projet
+					{{ form_widget(form.title) }}</p>
 					{{ form_widget(form.date) }}
-					{{ form_widget(form.link) }}
+					<p class="p-black">Thème
+					{{ form_widget(form.theme) }}</p>
+					<p class="p-black">Liens
+					{{ form_widget(form.link) }}</p>
+					<p class="p-black">Outils
+					{{ form_widget(form.stack) }}</p>
 					{{ form_widget(form.description) }}
 					{{ form_widget(form) }}
-					<button class="btn-primary">{{ button_label|default('Save') }}</button>
-					<a href="{{ path('app_crud_index') }}">Retour à la liste</a>
+					<button class="btn-primary">{{ button_label|default('Sauvegarder') }}</button>
+					<a href="{{ path('app_crud_index') }}">Retour à la liste</a></div>
 				</div>
 				{{ form_end(form) }}
 			</div>

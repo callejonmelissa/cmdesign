@@ -27,7 +27,7 @@
                             <td>{{ portfolio.image }}</td>
                             <td>{{ portfolio.date ? portfolio.date|date('Y-m-d') }}</td>
                             <td>{{ portfolio.link }}</td>
-                            <td>{{ portfolio.description }}</td>
+                            <td>{{ portfolio.description|raw }}</td>
                             <td>
                                 <a href="{{ path('app_crud_show', {'id': portfolio.id}) }}">show</a>
                                 <a href="{{ path('app_crud_edit', {'id': portfolio.id}) }}">edit</a>

@@ -12,9 +12,15 @@ a {
 }
 
 p {
-/*     color: white; */
+    color: white; 
     font-family: 'karla', sans-serif;
     font-size: 0.6rem;
+}
+
+.p-black {
+  color: black;
+  font-family: 'karla', sans-serif;
+  font-size: 0.9rem;
 }
 
 label {

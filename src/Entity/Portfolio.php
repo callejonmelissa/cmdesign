@@ -24,10 +24,10 @@ class Portfolio
     private $image;
 
     #[Vich\UploadableField(mapping: 'portfolio', fileNameProperty: 'image')]
-    private File $imageFile;
+    private ?File $imageFile = null;
 
-    #[ORM\Column(type: 'datetime')]
-    private ?\DateTimeInterface $updatedAt = null;
+/*     #[ORM\Column(type: 'datetime', nullable:true)]
+    private ?\DateTimeInterface $updatedAt = null; */
 
     #[ORM\Column(type: 'datetime')]
     private $date;
