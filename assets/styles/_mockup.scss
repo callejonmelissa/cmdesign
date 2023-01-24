@@ -1,0 +1,28 @@
+.mockup{
+    .container {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        overflow: hidden;
+
+    }
+    .mac .imgBx {
+        position: absolute;
+        top: 20px ;
+        left:  84px;
+        width: 465px;
+        height: 291px;
+        transition: 15s;
+        background-position: top; background-size: 100%;
+    }
+    .mac:hover .imgBx:hover {
+        position: absolute;
+        top: 20px ;
+        left:  84px;
+        width: 465px;
+        height: 291px;
+        background-position: bottom;
+    }
+}

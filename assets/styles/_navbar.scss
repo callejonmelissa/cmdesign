@@ -156,7 +156,7 @@ body {
   text-align: center;
   transform: translateY(-50%);
   list-style: none;
-  background: $primary;
+  background: #272729;
 }
 .nav ul li{
   position: relative;
@@ -217,6 +217,10 @@ body {
 
 .nav ul li a:hover:after{
   width: 100%;
+}
+
+.li-center {
+  margin-top: 22vw;
 }
 
 .menu-icon:checked ~ .nav {
