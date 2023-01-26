@@ -1,6 +1,7 @@
 $primary: #272729;
 $secondary: #ead234;
-$tertiary: #344054;
+$btn-default: #344054;
+$btn-hover: #101828;
 
 h1 {
     font-family: 'Anton', sans-serif;
@@ -38,8 +39,8 @@ input {
 
 button {
   color: white;
-  background-color: $tertiary;
-  border: $tertiary;
+  background-color: $btn-default;
+  border: $btn-default;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -50,6 +51,12 @@ button {
   width: 362px;
   border-radius: 8px;
   margin-top: 16px;
+}
+
+button:hover {
+  background-color: $btn-hover;
+  border: $btn-hover;
+  transition: background-color 0.5s;
 }
 
 .form-login {
