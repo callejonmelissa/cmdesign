@@ -1,5 +1,6 @@
-$primary: #1C1C1E;
-$secondary: #EEC62A;
+$primary: #272729;
+$secondary: #ead234;
+$tertiary: #344054;
 
 h1 {
     font-family: 'Anton', sans-serif;
@@ -30,6 +31,39 @@ label {
 td, th {
   color: white;
 }
+
+input {
+  border-radius: 8px;
+}
+
+button {
+  color: white;
+  background-color: $tertiary;
+  border: $tertiary;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  position: absolute;
+  height: 36px;
+  width: 362px;
+  border-radius: 8px;
+  margin-top: 16px;
+}
+
+.form-login {
+  display: flex;
+  flex-direction: column;
+  width: 360px;
+}
+
+// .footer {
+//     position: fixed;
+//     height: 30rem;
+//     bottom: 0;
+//     width: 100%;
+// }
 
 .background {
     background-color: $primary;
@@ -76,3 +110,6 @@ td, th {
     font-size: 0.5rem;
   }
 
+.illu {
+  border-radius: 8px;
+}
