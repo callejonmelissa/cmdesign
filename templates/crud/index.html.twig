@@ -4,19 +4,22 @@
 
 {% block body %}
 
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-lg">
+<div class="container">
+	<div class="row">
+		<div class="col-2"></div>
+		<div class="col-8">
+			<div class="card">
+				<div class="card-body mx-auto d-flex flex-column" style="width: 100%;height: 60vh;">
                 <table class="table">
                     <thead>
                         <tr>
-                            <th>Id</th>
-                            <th>Nom du projet</th>
-                            <th>Image</th>
-                            <th>Date du projet</th>
-                            <th>Liens (Website, GitHub, Figma)</th>
-                            <th>Description du projet</th>
-                            <th>Actions</th>
+                            <th class="p-black">Id</th>
+                            <th class="p-black">Project name</th>
+                            <th class="p-black">Image</th>
+                            <th class="p-black">Project date</th>
+                            <th class="p-black">Liens</th>
+                            <th class="p-black">Description</th>
+                            <th class="p-black">Action</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -35,13 +38,16 @@
                         </tr>
                     {% else %}
                         <tr>
-                            <td class="text-center" colspan="7">Aucun projet à l'horizon 😶‍🌫️</td>
+                            <td class="text-center p-black" colspan="7">Aucun projet à l'horizon 😶‍🌫️</td>
                         </tr>
                     {% endfor %}
                     </tbody>
                 </table>
-                <a href="{{ path('app_crud_new') }}" class="text-contour">Nouveau projet</a>
-            </div>
-        </div>
-    </div>
+                
+			</div>
+			<div class="col-2"></div>
+		</div>
+        <button class="btn-new" href="{{ path('app_crud_new') }}">Create</button>
+	</div>
+</div>
 {% endblock %}

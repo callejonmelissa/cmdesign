@@ -2,6 +2,8 @@ $primary: #272729;
 $secondary: #ead234;
 $btn-default: #344054;
 $btn-hover: #101828;
+$btn-border: #D0D5DD;
+$text-btn: #344054;
 
 h1 {
     font-family: 'Anton', sans-serif;
@@ -19,12 +21,6 @@ p {
     font-size: 0.6rem;
 }
 
-.p-black {
-  color: black;
-  font-family: 'karla', sans-serif;
-  font-size: 0.9rem;
-}
-
 label {
   color: white;
 }
@@ -37,7 +33,7 @@ input {
   border-radius: 8px;
 }
 
-button {
+button.btn-primary {
   color: white;
   background-color: $btn-default;
   border: $btn-default;
@@ -53,10 +49,40 @@ button {
   margin-top: 16px;
 }
 
-button:hover {
+.btn-new {
+  color: white;
+  background-color: $btn-default;
+  border: $btn-default;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  position: absolute;
+  height: 36px;
+  width: 62px;
+  border-radius: 8px;
+  margin-top: 16px;
+}
+
+button.btn-primary:hover, button.btn-new:hover{
   background-color: $btn-hover;
   border: $btn-hover;
   transition: background-color 0.5s;
+}
+
+button.btn-secondary {
+  color: $btn-default;
+  border: $text-btn;
+  background-color: white;
+  width: 150px;
+  height: 36px;
+}
+
+button.btn-secondary:hover {
+  background-color: #F9FAFB;
+  color: $btn-default;
+  border-radius: 8px;
 }
 
 .form-login {
@@ -65,15 +91,14 @@ button:hover {
   width: 360px;
 }
 
-// .footer {
-//     position: fixed;
-//     height: 30rem;
-//     bottom: 0;
-//     width: 100%;
-// }
-
 .background {
     background-color: $primary;
+}
+
+.p-black {
+  color: black;
+  font-family: 'karla', sans-serif;
+  font-size: 0.9rem;
 }
 
 .a-karla {
